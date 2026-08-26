@@ -2,17 +2,17 @@ name: parish_interest_survey_public
 
 profile: parish_survey
 
-seed-paths: ["seeds"]
+#seed-paths: ["seeds"]
 model-paths: ["models"]
 macro-paths: ["macros"]
 clean-targets:
   - "target"
   - "dbt_packages"
 
-seeds:
+#seeds:
   # Builds seeds into '<your_schema_name>_raw'
-  parish_interest_survey_public:
-    +schema: raw
+  #parish_interest_survey_public:
+  #  +schema: raw
 
 models:
   parish_interest_survey_public:
