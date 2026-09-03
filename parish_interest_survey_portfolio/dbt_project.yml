@@ -1,6 +1,6 @@
 name: parish_interest_survey_public
 
-profile: parish_survey
+profile: parish_survey_portfolio
 
 #seed-paths: ["seeds"]
 model-paths: ["models"]
