@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: ministry_interest_report
+    description: ""
+    columns:
+      - name: full_name
+        data_type: string
+        description: ""
+
+      - name: in_parish_directory
+        data_type: string
+        description: ""
+
+      - name: phone_number
+        data_type: string
+        description: ""
+
+      - name: ministry
+        data_type: string
+        description: ""
+

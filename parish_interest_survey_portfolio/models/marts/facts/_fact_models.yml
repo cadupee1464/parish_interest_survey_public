@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_interest
+    description: ""
+    columns:
+      - name: response_id
+        data_type: string
+        description: ""
+
+      - name: ministry_id
+        data_type: string
+        description: ""
+
