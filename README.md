@@ -155,6 +155,7 @@ parish_interest_survey_portfolio/
 
 ```bash
 git clone https://github.com/cadupee1464/parish_interest_survey_public.git
+cd parish_interest_survey_public
 ```
 
 ### 2. Install dbt dependencies
