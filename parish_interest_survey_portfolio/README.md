@@ -104,6 +104,8 @@ The project includes a QA analysis comparing observed model outputs against know
 | Duplicate response–ministry pairs |        0 |
 | Null fact foreign keys            |        0 |
 
+From BigQuery's query results:
+
 
 ![QA results](docs/images/qa_results.png)
 
