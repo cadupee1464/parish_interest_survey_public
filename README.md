@@ -154,7 +154,7 @@ parish_interest_survey_portfolio/
 ### 1. Clone the repository
 
 ```bash
-git clone <!-- repository URL -->
+git clone https://github.com/cadupee1464/parish_interest_survey_public.git
 cd parish_interest_survey_portfolio
 ```
 
