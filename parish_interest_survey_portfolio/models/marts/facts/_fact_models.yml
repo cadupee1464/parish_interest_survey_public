@@ -6,9 +6,21 @@ models:
     columns:
       - name: response_id
         data_type: string
-        description: ""
+        description: '{{ doc("response_id") }}'
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_response')
+                field: response_id
 
       - name: ministry_id
         data_type: string
-        description: ""
+        description: '{{ doc("ministry_id") }}'
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ministry')
+                field: ministry_id
 
