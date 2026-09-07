@@ -11,7 +11,7 @@ models:
           - not_null
           - relationships:
               arguments:
-                to: ref('dim_response')
+                to: ref('dim_responses')
                 field: response_id
 
       - name: ministry_id
