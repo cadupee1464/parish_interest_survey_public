@@ -1,0 +1,150 @@
+version: 2
+
+models:
+  - name: int_ministry_interest
+    description: "Silver Layer ephemeral transformation of the embedded text values in ministry_interests into a Boolean feature array"
+    columns:
+      - name: response_id
+        data_type: string
+        description: '{{ doc("response_id") }}'
+        tests:
+          - unique
+          - not_null
+
+      - name: submitted_at
+        data_type: timestamp
+        description: '{{ doc("submitted_at" )}}'
+        tests:
+          - not_null
+
+      - name: full_name
+        data_type: string
+        description: '{{ doc("full_name") }}'
+        tests:
+          - unique
+          - not_null
+
+      - name: in_parish_directory
+        data_type: string
+        description: '{{ doc("in_parish_directory") }}'
+
+      - name: phone_number
+        data_type: string
+        description: '{{ doc("phone_number") }}'
+
+      - name: on_meal_team
+        data_type: boolean
+        description: '{{ doc("on_meal_team") }}'
+        tests:
+          - not_null
+
+      - name: building_committee_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Building Committee"
+        tests:
+          - not_null
+
+      - name: burial_society_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Burial Society"
+        tests:
+          - not_null
+
+      - name: community_outreach_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining a Community Outreach initiative"
+        tests:
+          - not_null
+
+      - name: choir_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Choir"
+        tests:
+          - not_null
+
+      - name: events_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Events planning team"
+        tests:
+          - not_null
+
+      - name: facilities_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Facilites & Groundskeeping team"
+        tests:
+          - not_null
+
+      - name: flower_ministry_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Flower Ministry"
+        tests:
+          - not_null
+
+      - name: spy_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Saint Peter's Youth ministry"
+        tests:
+          - not_null
+
+      - name: homebound_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining a homebound ministry initiative"
+        tests:
+          - not_null
+
+      - name: liturgical_ministry_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the liturgical ministry care team"
+        tests:
+          - not_null
+
+      - name: programs_and_fundraising_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining a programs and fundraising initiative"
+        tests:
+          - not_null
+
+      - name: orthodox_school_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Orthodox School ministry"
+        tests:
+          - not_null
+
+      - name: security_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Security Team"
+        tests:
+          - not_null
+
+      - name: welcome_booth_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the Welcome Booth & Ushers ministry"
+        tests:
+          - not_null
+
+      - name: media_communications_interest
+        data_type: boolean
+        description: "True or False value on whether respondent is interested in joining the media & communications team"
+        tests:
+          - not_null
+
+  - name: int_unpivot
+    description: "Silver layer reshaping model to make ministry options a columnar feature"
+    columns:
+      - name: response_id
+        data_type: string
+        description: '{{ doc("response_id") }}'
+        tests:
+          - not_null
+
+      - name: ministry
+        data_type: string
+        description: '{{ doc("ministry") }}'
+        tests:
+          - not_null
+
+      - name: interested
+        data_type: boolean
+        description: "True or false value of interest in joining the listed ministry"
+        tests:
+          - not_null

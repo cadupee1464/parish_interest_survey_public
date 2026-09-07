@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_interest_survey
+    description: "Initial staging of raw data. Minimal transformation of column names"
+    columns:
+      - name: response_id
+        data_type: string
+        description: '{{ doc("response_id") }}'
+        tests:
+          - unique
+          - not_null
+
+      - name: submitted_at
+        data_type: timestamp
+        description: '{{ doc("submitted_at") }}'
+        tests:
+          - not_null
+
+      - name: full_name
+        data_type: string
+        description: '{{ doc("full_name") }}'
+        tests:
+          - unique
+          - not_null
+
+      - name: in_parish_directory
+        data_type: string
+        description: '{{ doc("in_parish_directory") }}'
+
+      - name: phone_number
+        data_type: string
+        description: '{{ doc("phone_number") }}'
+
+      - name: on_meal_team
+        data_type: string
+        description: '{{ doc("on_meal_team") }}'
+
+      - name: ministry_interests
+        data_type: string
+        description: "Unsorted grouping of possible ministries the respondent has noted being interested in joining."
+        
+      - name: alt_ministry_interests
+        data_type: string
+        description: "Free response field for respondent's other interests. Not modeled but stored."
+
+      - name: professional_skills
+        data_type: string
+        description: "Free response field for respondent's professional skills. Not modeled but stored."
+
+      - name: ministry_wish_list
+        data_type: string
+        description: "Free response field for other ministries respondent would like to see at St. Peter's. 
+                      Not modeled but stored."
