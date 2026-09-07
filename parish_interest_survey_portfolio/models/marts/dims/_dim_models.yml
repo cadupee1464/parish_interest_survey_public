@@ -2,36 +2,36 @@ version: 2
 
 models:
   - name: dim_ministry
-    description: ""
+    description: "Gold layer Unique ministry dimension table"
     columns:
       - name: ministry_id
         data_type: string
-        description: ""
+        description: '{{ doc("ministry_id") }}'
 
       - name: ministry
         data_type: string
-        description: ""
+        description: '{{ doc("ministry") }}'
 
   - name: dim_responses
-    description: ""
+    description: "Gold layer Unique response dimension table"
     columns:
       - name: response_id
         data_type: string
-        description: ""
+        description: '{{ doc("response_id")}}'
 
       - name: full_name
         data_type: string
-        description: ""
+        description: '{{ doc("full_name") }}'
 
       - name: in_parish_directory
         data_type: string
-        description: ""
+        description: '{{ doc("in_parish_directory") }}'
 
       - name: phone_number
         data_type: string
-        description: ""
+        description: '{{ doc("phone_number") }}'
 
       - name: submitted_at
         data_type: timestamp
-        description: ""
+        description: '{{ doc("submitted_at") }}'
 

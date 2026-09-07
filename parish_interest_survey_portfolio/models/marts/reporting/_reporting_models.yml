@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: ministry_interest_report
-    description: ""
+    description: "Report consuming fact table to give explicit response and ministry linkages"
     columns:
       - name: full_name
         data_type: string

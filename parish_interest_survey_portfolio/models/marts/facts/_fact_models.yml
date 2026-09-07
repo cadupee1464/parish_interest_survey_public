@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fact_interest
-    description: ""
+    description: "Gold layer fact mart associating many-to-many relationship of responses to ministries"
     columns:
       - name: response_id
         data_type: string
