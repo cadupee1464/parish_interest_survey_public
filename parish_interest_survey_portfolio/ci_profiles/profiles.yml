@@ -1,0 +1,11 @@
+# parish_interest_survey_portfolio/ci_profiles/profiles.yml
+
+parish_interest_survey_public:
+  target: ci
+  outputs:
+    ci:
+      type: bigquery
+      method: oauth
+      project: dummy-project
+      dataset: dummy_dataset
+      threads: 1
